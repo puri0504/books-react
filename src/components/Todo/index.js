@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './style.css'
 
-class TodoList extends Component {
+class Todo extends Component {
     state = {
         isShow: false,
     }
 
     render() {
-        const desc = this.state.isShow && this.props.task.desc
+        const desc = this.state.isShow && <div>{this.props.task.desc}</div>
 
         return (
-            <div>
+            <div className="Todo">
                 <div>
                     <h3>{this.props.task.title}</h3>
                     {desc}
@@ -26,4 +28,8 @@ class TodoList extends Component {
     }
 }
 
-export default TodoList;
+Todo.propTypes = {
+    task: PropTypes.object,
+}
+
+export default Todo;

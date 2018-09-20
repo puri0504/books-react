@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Todo from './Todo'
-import tasks from '../mock/tasks'
+import Todo from '../../components/Todo/index'
+import tasks from '../../mock/tasks'
+import './style.css'
 
 class TodoList extends Component {
     render() {
         const todos = tasks.map(task => <Todo key={task.id} task={task}/>)
 
         return (
-            <div>
+            <div className="TodoList">
                 <h1>Todos list</h1>
                 {todos}
             </div>
