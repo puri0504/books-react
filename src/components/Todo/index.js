@@ -4,7 +4,11 @@ import './style.css'
 
 class Todo extends Component {
     state = {
-        isShow: false,
+        isShow: this.props.defaultIsOpen,
+    }
+
+    componentWillMount() {
+        console.log(this.state.isShow)
     }
 
     render() {

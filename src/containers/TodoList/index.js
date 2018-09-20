@@ -5,7 +5,7 @@ import './style.css'
 
 class TodoList extends Component {
     render() {
-        const todos = tasks.map(task => <Todo key={task.id} task={task}/>)
+        const todos = tasks.map((task, index) => <Todo key={task.id} task={task} defaultIsOpen={index === 0} />)
 
         return (
             <div className="TodoList">
