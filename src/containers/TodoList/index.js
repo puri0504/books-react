@@ -35,18 +35,12 @@ class TodoList extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    console.log(state)
+const mapStateToProps = state => {
+    console.log('fsdf')
     return {
-        tasks: state.tasks
+        tasks1: state,
     }
 }
-
-// function mapStateToProps(state) {
-//     return {
-//         tasks: state.get('tasks')
-//     };
-// }
 
 const VisibleTodoList = connect(
     mapStateToProps,
