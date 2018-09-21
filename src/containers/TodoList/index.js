@@ -30,15 +30,28 @@ class TodoList extends Component {
         openTodoId: openTodoId === this.state.openTodoId ? null : openTodoId,
     })
 
-    complete = (todoId) => console.log('complete', todoId)
+    complete = (todoId) => {
+        console.log('complete', todoId)
+    }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
+    console.log(state)
     return {
-        tasks: state.get('tasks')
-    };
+        tasks: state.tasks
+    }
 }
 
-connect(mapStateToProps)(TodoList);
+// function mapStateToProps(state) {
+//     return {
+//         tasks: state.get('tasks')
+//     };
+// }
+
+const VisibleTodoList = connect(
+    mapStateToProps,
+)(TodoList)
+
+console.log(VisibleTodoList)
 
 export default TodoList;
