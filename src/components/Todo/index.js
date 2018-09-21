@@ -11,6 +11,7 @@ class Todo extends Component {
                 <div>
                     <h3>{this.props.task.title}</h3>
                     {desc}
+                    <div className="completed">{this.props.task.completed ? 'completed' : ''}</div>
                 </div>
                 <button onClick={this.props.onToggleOpen}>{this.props.isOpen ? 'close' : 'show'}</button>
             </div>

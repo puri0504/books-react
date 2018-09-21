@@ -4,3 +4,7 @@
     padding: 5px 10px;
     margin-bottom: 10px;
 }
+
+.Todo .completed {
+    color: #8B0000;
+}
