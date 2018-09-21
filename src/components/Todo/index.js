@@ -3,16 +3,8 @@ import PropTypes from 'prop-types';
 import './style.css'
 
 class Todo extends Component {
-    state = {
-        isShow: this.props.defaultIsOpen,
-    }
-
-    componentWillMount() {
-        console.log(this.state.isShow)
-    }
-
     render() {
-        const desc = this.state.isShow && <div>{this.props.task.desc}</div>
+        const desc = this.props.isOpen && <div>{this.props.task.desc}</div>
 
         return (
             <div className="Todo">
@@ -20,20 +12,16 @@ class Todo extends Component {
                     <h3>{this.props.task.title}</h3>
                     {desc}
                 </div>
-                <button onClick={this.toggleShow}>{this.state.isShow ? 'close' : 'show'}</button>
+                <button onClick={this.props.onToggleOpen}>{this.props.isOpen ? 'close' : 'show'}</button>
             </div>
         )
-    }
-
-    toggleShow = () => {
-        this.setState({
-            isShow: !this.state.isShow,
-        })
     }
 }
 
 Todo.propTypes = {
     task: PropTypes.object,
+    isOpen: PropTypes.bool,
+    onToggleOpen: PropTypes.func,
 }
 
 export default Todo;

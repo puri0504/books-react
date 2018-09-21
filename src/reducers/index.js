@@ -1,6 +1,6 @@
 export default (state, action) => {
     switch (action.type) {
-        case 'SET':
-            return state = 'test11'
+        case 'UPDATE':
+            return state.tasks[0].title = 'new title 1'
     }
 }

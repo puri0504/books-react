@@ -4,16 +4,24 @@ import tasks from '../../mock/tasks'
 import './style.css'
 
 class TodoList extends Component {
+    state = {
+        openTodoId: null,
+    }
+
     render() {
-        const todos = tasks.map((task, index) => <Todo key={task.id} task={task} defaultIsOpen={index === 0} />)
+        const todos = tasks.map((task, index) => <Todo key={task.id} task={task} isOpen={this.state.openTodoId === task.id} onToggleOpen={this.handleOpen.bind(this, task.id)} />)
 
         return (
             <div className="TodoList">
-                <h1>Todos list</h1>
+                <h1>Todo list</h1>
                 {todos}
             </div>
         )
     }
+
+    handleOpen = (openTodoId) => this.setState({
+        openTodoId: openTodoId === this.state.openTodoId ? null : openTodoId,
+    })
 }
 
 export default TodoList;
