@@ -10,8 +10,13 @@ class TodoList extends Component {
     }
 
     render() {
-        console.log(this.store)
-        const todos = tasks.map((task, index) => <Todo key={task.id} task={task} isOpen={this.state.openTodoId === task.id} onToggleOpen={this.handleOpen.bind(this, task.id)} />)
+        const todos = tasks.map((task, index) =>
+            <Todo key={task.id}
+                  task={task}
+                  isOpen={this.state.openTodoId === task.id}
+                  onToggleOpen={this.handleOpen.bind(this, task.id)}
+                  onComplete={this.complete.bind(this, task.id)}
+            />)
 
         return (
             <div className="TodoList">
@@ -24,6 +29,8 @@ class TodoList extends Component {
     handleOpen = (openTodoId) => this.setState({
         openTodoId: openTodoId === this.state.openTodoId ? null : openTodoId,
     })
+
+    complete = (todoId) => console.log('complete', todoId)
 }
 
 function mapStateToProps(state) {
