@@ -8,11 +8,9 @@ class Todo extends Component {
 
         return (
             <div className="Todo">
-                <div>
-                    <h3>{this.props.task.title}</h3>
-                    {desc}
-                    <div className="completed">{this.props.task.completed ? 'completed' : ''}</div>
-                </div>
+                <h3>{this.props.task.title}</h3>
+                {desc}
+                <div className="completed">{this.props.task.completed ? 'completed' : ''}</div>
                 <button onClick={this.props.onToggleOpen}>{this.props.isOpen ? 'close' : 'show'}</button>
                 <button onClick={this.props.onComplete}>completed</button>
             </div>

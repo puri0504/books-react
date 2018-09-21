@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-    BrowserRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
@@ -10,19 +9,15 @@ import About from './About';
 class App extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <ul>
-                        <li><Link to="/">Todos</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                    </ul>
+            <React.Fragment>
+                <nav>
+                    <Link to="/">Todos</Link>
+                    <Link to="/about">About</Link>
+                </nav>
 
-                    <div className="App">
-                        <Route exact path="/" component={VisibleTodoList}/>
-                        <Route path="/about" component={About}/>
-                    </div>
-                </div>
-            </Router>
+                <Route exact path="/" component={VisibleTodoList}/>
+                <Route path="/about" component={About}/>
+            </React.Fragment>
         );
     }
 }
