@@ -26,7 +26,11 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case COMPLETE_TODO:
-            return state.tasks.map(task => task.id === action.id ? {...task, completed: true} : task);
+            const tasks = state.tasks.map(task => task.id === action.id ? {...task, completed: true} : task);
+            return {
+                ...state,
+                tasks,
+            }
         default:
             return state;
     }

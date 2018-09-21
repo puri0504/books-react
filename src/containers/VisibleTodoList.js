@@ -10,11 +10,11 @@ const mapStateToProps = state => {
   }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//   actions: bindActionCreators(TodoActions, dispatch)
-// })
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(TodoActions, dispatch)
+})
 
 export default connect(
   mapStateToProps,
-  // mapDispatchToProps
+  mapDispatchToProps
 )(TodoList)

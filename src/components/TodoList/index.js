@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import Todo from '../Todo/index'
-// import tasks from '../../mock/tasks'
-
 import './style.css'
 
 class TodoList extends Component {
@@ -10,7 +8,8 @@ class TodoList extends Component {
     }
 
     render() {
-        console.info('todos', this.props.todos);
+        //  const { todo, completeTodo, deleteTodo } = this.props
+        console.info('props', this.props);
 
         const todos = this.props.todos.map((task, index) =>
             <Todo key={task.id}
@@ -33,7 +32,8 @@ class TodoList extends Component {
     })
 
     complete = (todoId) => {
-        console.log('complete', todoId)
+        // console.log('complete', todoId)
+        this.props.actions.completeTodo(todoId)
     }
 }
 
