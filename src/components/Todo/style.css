@@ -1,8 +1,13 @@
 .Todo {
     background-color: #f3f3f3;
-    width: 200px;
+    width: 180px;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.Todo button {
+    font-size: 13px;
+    margin-right: 10px;
 }
 
 .Todo .title {
