@@ -9,7 +9,7 @@ class TodoList extends Component {
 
     render() {
         //  const { todos, actions } = this.props
-
+        console.log('TodoList')
         const todos = this.props.todos.map((task, index) =>
             <Todo key={task.id}
                   task={task}

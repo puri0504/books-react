@@ -5,10 +5,27 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import VisibleTodoList from '../../containers/VisibleTodoList';
-import About from '../About';
+// import VisibleTodoList from '../../containers/VisibleTodoList';
+// import About from '../About';
+import DynamicImport from '../DynamicImport';
 import NotFound from '../NotFound'
 import './style.css';
+
+const VisibleTodoList = (props) => (
+    <DynamicImport load={() => import('../../containers/VisibleTodoList')}>
+        {(Component) => Component === null
+            ? <p>Loading</p>
+            : <Component {...props} />}
+    </DynamicImport>
+)
+
+const About = (props) => (
+    <DynamicImport load={() => import('../About')}>
+        {(Component) => Component === null
+            ? <p>Loading</p>
+            : <Component {...props} />}
+    </DynamicImport>
+)
 
 class App extends Component {
     render() {
@@ -24,7 +41,7 @@ class App extends Component {
                     <Route exact path="/" component={VisibleTodoList}/>
                     <Route exact path="/about" component={About}/>
                     <Route path="*" component={NotFound} />
-            </Switch>
+                </Switch>
             </React.Fragment>
         );
     }
