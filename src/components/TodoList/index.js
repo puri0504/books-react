@@ -8,8 +8,7 @@ class TodoList extends Component {
     }
 
     render() {
-        //  const { todo, completeTodo, deleteTodo } = this.props
-        console.info('props', this.props);
+        //  const { todos, actions } = this.props
 
         const todos = this.props.todos.map((task, index) =>
             <Todo key={task.id}
@@ -32,7 +31,6 @@ class TodoList extends Component {
     })
 
     complete = (todoId) => {
-        // console.log('complete', todoId)
         this.props.actions.completeTodo(todoId)
     }
 }
