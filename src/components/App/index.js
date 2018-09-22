@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {
     Switch,
+    Redirect,
     Route,
     Link
 } from 'react-router-dom';
@@ -19,6 +20,7 @@ class App extends Component {
                 </nav>
 
                 <Switch>
+                    <Redirect from='/about-us' to='/about'/>
                     <Route exact path="/" component={VisibleTodoList}/>
                     <Route exact path="/about" component={About}/>
                     <Route path="*" component={NotFound} />
