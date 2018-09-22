@@ -9,13 +9,12 @@ class TodoList extends Component {
 
     render() {
         //  const { todos, actions } = this.props
-        console.log('TodoList')
         const todos = this.props.todos.map((task, index) =>
             <Todo key={task.id}
                   task={task}
                   isOpen={this.state.openTodoId === task.id}
-                  onToggleOpen={this.handleOpen.bind(this, task.id)}
-                  onComplete={this.complete.bind(this, task.id)}
+                  onToggleOpen={e => this.handleOpen(task.id)}
+                  onComplete={e => this.complete(task.id)}
             />);
 
         return (
@@ -31,7 +30,8 @@ class TodoList extends Component {
     })
 
     complete = (todoId) => {
-        this.props.actions.completeTodo(todoId)
+        this.props.actions.completeTodo(todoId);
+        // this.props.history.push('/about');
     }
 }
 

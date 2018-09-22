@@ -1,8 +1,7 @@
 import React  from 'react';
 
-function About() {
-    console.log('About')
-    return <h1>About page</h1>;
+function About(props) {
+    return <h1>About page {props.match.params.id}</h1>;
 }
 
 export default About;
