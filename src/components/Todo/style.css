@@ -1,10 +1,11 @@
 .Todo {
-    background-color: lightcyan;
+    background-color: #f3f3f3;
     width: 200px;
     padding: 5px 10px;
     margin-bottom: 10px;
 }
 
 .Todo .completed {
-    color: #006400;
+    margin-top: 10px;
+    color: #00F;
 }
