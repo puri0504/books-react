@@ -1,3 +1,7 @@
-.nav-menu a {
-    margin-right: 10px;
+body {
+   font-family: Arial;
+}
+
+.App {
+    margin: 10px;
 }
