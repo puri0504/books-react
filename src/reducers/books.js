@@ -1,4 +1,4 @@
-import {ADD_FAVORITE} from '../consts/action-types';
+import {TOGGLE_FAVORITE} from '../consts/action-types';
 
 const initialState = [
     {
@@ -23,7 +23,7 @@ const initialState = [
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case ADD_FAVORITE:
+        case TOGGLE_FAVORITE:
             return state.map(book => book.id === action.id ? {...book, favorite: !book.favorite} : book);
         default:
             return state;

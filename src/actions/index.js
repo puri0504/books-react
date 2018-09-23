@@ -1,3 +1,3 @@
 import * as types from '../consts/action-types';
 
-export const addFavorite = id => ({type: types.ADD_FAVORITE, id});
+export const toggleFavorite = id => ({type: types.TOGGLE_FAVORITE, id});
