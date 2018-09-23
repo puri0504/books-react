@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Book from '../Book/index'
 import './style.css'
+import PropTypes from "prop-types";
 
 class BookList extends Component {
     state = {
@@ -33,6 +34,11 @@ class BookList extends Component {
         this.props.actions.addFavorite(id);
         // this.props.history.push('/about');
     }
+}
+
+BookList.propTypes = {
+    books: PropTypes.array,
+    actions: PropTypes.object,
 }
 
 export default BookList;

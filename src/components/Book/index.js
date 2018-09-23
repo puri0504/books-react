@@ -5,7 +5,6 @@ import './style.css'
 class Book extends Component {
     render() {
         const desc = this.props.isOpen && <div className="desc">{this.props.book.desc}</div>
-        // const favorite = this.props.book.favorite ? <div className="favorite">favorite</div> : ''
         const bookCssClasses = 'Book ' + (this.props.book.favorite ? 'favorite' : '')
 
         return (
