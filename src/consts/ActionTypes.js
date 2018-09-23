@@ -1,2 +1,2 @@
-export const COMPLETE_TODO = 'COMPLETE_TODO';
-export const RENAME_USER = 'COMPLETE_TODO';
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const RENAME_USER = 'RENAME_USER';

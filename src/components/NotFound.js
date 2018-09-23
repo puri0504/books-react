@@ -7,7 +7,7 @@ const NotFound = () =>
     <div>
         <h3>404 page not found</h3>
         <div>We are sorry but the page you are looking for does not exist.</div>
-        <div>Go to <Link to="/">todos list</Link></div>
+        <div>Go to <Link to="/">book list</Link></div>
     </div>
 
 export default NotFound;

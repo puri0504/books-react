@@ -1,25 +1,25 @@
-.Todo {
+.Book {
     background-color: #f3f3f3;
     width: 180px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-.Todo button {
+.Book button {
     font-size: 13px;
     margin-right: 10px;
 }
 
-.Todo .title {
+.Book .title {
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.Todo .desc {
+.Book .desc {
     margin-bottom: 10px;
 }
 
-.Todo .completed {
+.Book .favorite {
     margin-top: 10px;
     color: #00F;
 }

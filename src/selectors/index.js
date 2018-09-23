@@ -1,3 +1,3 @@
-export function getTodos(state) {
-    return state.tasks;
+export function getBooks(state) {
+    return state.books;
 }

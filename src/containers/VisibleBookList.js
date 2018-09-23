@@ -1,20 +1,20 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as TodoActions from '../actions'
-import TodoList from '../components/TodoList'
-import { getTodos } from '../selectors'
+import * as BooksActions from '../actions'
+import BookList from '../components/BookList'
+import { getBooks } from '../selectors'
 
 const mapStateToProps = state => {
   return {
-    todos: getTodos(state)
+    books: getBooks(state)
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(TodoActions, dispatch)
+  actions: bindActionCreators(BooksActions, dispatch)
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList)
+)(BookList)

@@ -3,9 +3,8 @@ import './style.css';
 import NavBar from '../NavBar/index'
 import {Redirect, Route, Switch} from "react-router-dom";
 import NotFound from "../NotFound";
-import VisibleTodoList from "../../routes/TodoList";
+import VisibleBookList from "../../routes/BookList";
 import About from "../../routes/About";
-
 
 class App extends Component {
     render() {
@@ -14,7 +13,7 @@ class App extends Component {
                 <NavBar/>
                 <Switch>
                     <Redirect from='/about-us' to='/about'/>
-                    <Route exact path="/" component={VisibleTodoList}/>
+                    <Route exact path="/" component={VisibleBookList}/>
                     <Route exact path="/about" component={About}/>
                     <Route path="*" component={NotFound} />
                 </Switch>
