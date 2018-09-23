@@ -1,8 +1,8 @@
-import DynamicImport from '../components/DynamicImport';
+import DynamicImport from '../../components/dynamic-import';
 import React from 'react';
 
 export default (props) => (
-    <DynamicImport load={() => import('../containers/VisibleBookList')}>
+    <DynamicImport load={() => import('../../components/about')}>
         {(Component) => Component === null
             ? <p>Loading</p>
             : <Component {...props} />}

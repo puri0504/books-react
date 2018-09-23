@@ -1,4 +1,4 @@
-import {ADD_FAVORITE} from '../consts/ActionTypes';
+import {ADD_FAVORITE} from '../consts/action-types';
 
 const initialState = [
     {
@@ -29,3 +29,7 @@ export default (state = initialState, action) => {
             return state;
     }
 };
+
+export function getBooks(state) {
+    return state.books;
+}

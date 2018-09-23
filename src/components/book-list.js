@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import Book from '../Book/index'
-import './style.css'
-import PropTypes from "prop-types";
+import Book from './book/book'
+import PropTypes from 'prop-types';
 
 class BookList extends Component {
     state = {
@@ -19,8 +18,8 @@ class BookList extends Component {
             />);
 
         return (
-            <div className="BooksList">
-                <h1>Book list</h1>
+            <div className="books-list">
+                <h1>Books list</h1>
                 {books}
             </div>
         )

@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import './style.css';
-import NavBar from '../NavBar/index'
-import {Redirect, Route, Switch} from "react-router-dom";
-import NotFound from "../NotFound";
-import VisibleBookList from "../../routes/BookList";
-import About from "../../routes/About";
+import {Redirect, Route, Switch} from 'react-router-dom';
+import NavBar from '../navbar/navbar'
+import NotFound from '../not-found';
+import VisibleBookList from '../../containers/routes/book-list';
+import About from "../../containers/routes/about";
+import './app.css';
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="app">
                 <NavBar/>
                 <Switch>
                     <Redirect from='/about-us' to='/about'/>

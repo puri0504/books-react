@@ -1,29 +1,24 @@
-.Book {
+.book {
     background: #f3f3f3;
     width: 180px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-.Book.favorite {
+.book.favorite {
     background: #f99;
 }
 
-.Book button {
+.book button {
     font-size: 13px;
     margin-right: 10px;
 }
 
-.Book .title {
+.book .title {
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.Book .desc {
+.book .desc {
     margin-bottom: 10px;
-}
-
-.Book .favorite {
-    margin-top: 10px;
-    color: #00F;
 }

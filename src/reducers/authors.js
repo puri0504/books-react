@@ -1,4 +1,4 @@
-import {RENAME_USER} from '../consts/ActionTypes';
+import {RENAME_AUTHOR} from '../consts/action-types';
 
 const initialState = [
     {
@@ -6,18 +6,18 @@ const initialState = [
         name: 'О.Уайльд',
     },
     {
-        id: 1,
+        id: 2,
         name: 'Э.Ремарк',
     },
     {
-        id: 1,
+        id: 3,
         name: 'А.Чехов',
     },
 ];
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case RENAME_USER:
+        case RENAME_AUTHOR:
             return state.map(user => user.id === action.id ? {...user, name: action.name} : user);
         default:
             return state;
