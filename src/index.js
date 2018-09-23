@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import {BrowserRouter as Router} from 'react-router-dom';
+import thunk from 'redux-thunk'
 import './index.css';
 import App from './components/app/app';
 import reducer from './reducers';
@@ -17,7 +18,7 @@ const logger = store => next => action => {
 const store = createStore(
     reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(logger),
+    applyMiddleware(thunk, logger),
 );
 
 render(

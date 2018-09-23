@@ -1,2 +1,3 @@
+export const FETCHING = 'FETCHING';
 export const TOGGLE_FAVORITE = 'TOGGLE_FAVORITE';
 export const RENAME_AUTHOR = 'RENAME_AUTHOR';
