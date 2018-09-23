@@ -3,7 +3,15 @@ import {RENAME_USER} from '../consts/ActionTypes';
 const initialState = [
     {
         id: 1,
-        name: 'ksenia',
+        name: 'О.Уайльд',
+    },
+    {
+        id: 1,
+        name: 'Э.Ремарк',
+    },
+    {
+        id: 1,
+        name: 'А.Чехов',
     },
 ];
 

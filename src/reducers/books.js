@@ -3,20 +3,20 @@ import {ADD_FAVORITE} from '../consts/ActionTypes';
 const initialState = [
     {
         id: 1,
-        title: 'Watch screencast',
-        desc: 'Watch screencast and make redux app',
+        title: 'Три товарища',
+        desc: 'Роман Ремарка, работу над которым он начал в 1932 году.',
         favorite: true,
     },
     {
         id: 2,
-        title: 'Use Redux',
-        desc: 'Add redux to your app',
+        title: 'Вишневый сад',
+        desc: 'Лирическая пьеса в четырёх действиях',
         favorite: false,
     },
     {
         id: 3,
-        title: 'Use router',
-        desc: 'Add router to your app',
+        title: 'Портрет Дориана Грея',
+        desc: 'Единственный опубликованный роман Уайльда',
         favorite: false,
     },
 ];
