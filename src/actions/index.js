@@ -1,11 +1,24 @@
 import * as types from '../consts/action-types';
 
-export const toggleFavorite = (id) => {
+export const toggleFavoriteDispatch = (id) => {
     return dispatch => {
-        dispatch({ type: types.FETCHING_FAVORITE, id })
+        dispatch(fetchingFavorite())
 
         setTimeout(() => {
-            dispatch({ type: types.TOGGLE_FAVORITE, id });
+            dispatch(toggleFavorite(id));
         }, 500)
     }
 };
+
+const toggleFavorite = (payload) => {
+    return {
+        type: types.TOGGLE_FAVORITE,
+        payload,
+    }
+}
+
+const fetchingFavorite = () => {
+    return {
+        type: types.FETCHING_FAVORITE,
+    }
+}

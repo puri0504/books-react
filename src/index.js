@@ -24,9 +24,7 @@ const store = createStore(
 render(
     <Provider store={store}>
         <Router>
-            <React.Fragment>
-                <App/>
-            </React.Fragment>
+            <App/>
         </Router>
     </Provider>,
     document.getElementById('root')

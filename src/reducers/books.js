@@ -24,7 +24,7 @@ const initialState = [
 export default (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_FAVORITE:
-            return state.map(book => book.id === action.id ? {...book, favorite: !book.favorite} : book);
+            return state.map(book => book.id === action.payload ? {...book, favorite: !book.favorite} : book);
         default:
             return state;
     }

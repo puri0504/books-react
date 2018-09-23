@@ -30,7 +30,7 @@ class BookList extends Component {
     })
 
     addToFavorite = (id) => {
-        this.props.actions.toggleFavorite(id);
+        this.props.actions.toggleFavoriteDispatch(id);
         // this.props.history.push('/about');
     }
 }
