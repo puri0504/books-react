@@ -5,7 +5,7 @@ import './book.css'
 class Book extends Component {
     constructor(props) {
         super(props);
-        this.myRef = React.createRef();
+        this.titleRef = React.createRef();
     }
     render() {
         const desc = this.props.isOpen && <div className="desc">{this.props.book.desc}</div>
@@ -13,7 +13,7 @@ class Book extends Component {
 
         return (
             <div className={bookCssClasses}>
-                <div ref={this.myRef} className="title">{this.props.book.title}</div>
+                <div ref={this.titleRef} className="title">{this.props.book.title}</div>
                 {desc}
                 <button onClick={this.props.onToggleOpen}>{this.props.isOpen ? 'hide' : 'show more'}</button>
                 <button onClick={this.props.onFavorite}>{this.props.book.favorite ? 'unfavorite' : 'favorite'}</button>
@@ -22,7 +22,7 @@ class Book extends Component {
     }
 
     componentDidMount() {
-        console.log(this.myRef)
+        // console.log(this.titleRef.current)
     }
 }
 
