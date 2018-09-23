@@ -4,7 +4,7 @@ import './style.css'
 
 class BookList extends Component {
     state = {
-        openTodoId: null,
+        openId: null,
     }
 
     render() {
@@ -12,21 +12,21 @@ class BookList extends Component {
         const books = this.props.books.map((book, index) =>
             <Book key={book.id}
                   book={book}
-                  isOpen={this.state.openTodoId === book.id}
+                  isOpen={this.state.openId === book.id}
                   onToggleOpen={e => this.handleOpen(book.id)}
                   onFavorite={e => this.addToFavorite(book.id)}
             />);
 
         return (
             <div className="BooksList">
-                <h1>Todo list</h1>
+                <h1>Book list</h1>
                 {books}
             </div>
         )
     }
 
     handleOpen = (openId) => this.setState({
-        openTodoId: openId === this.state.openTodoId ? null : openId,
+        openId: openId === this.state.openId ? null : openId,
     })
 
     addToFavorite = (id) => {

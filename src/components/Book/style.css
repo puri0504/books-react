@@ -1,8 +1,12 @@
 .Book {
-    background-color: #f3f3f3;
+    background: #f3f3f3;
     width: 180px;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.Book.favorite {
+    background: #f99;
 }
 
 .Book button {
