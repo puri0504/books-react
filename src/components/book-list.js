@@ -15,6 +15,7 @@ class BookList extends Component {
                   isOpen={this.state.openId === book.id}
                   onToggleOpen={e => this.handleOpen(book.id)}
                   onFavorite={e => this.addToFavorite(book.id)}
+                  onRemove={e => this.remove(book.id)}
             />);
 
         return (
@@ -31,6 +32,11 @@ class BookList extends Component {
 
     addToFavorite = (id) => {
         this.props.actions.toggleFavoriteDispatch(id);
+        // this.props.history.push('/about');
+    }
+
+    remove = (id) => {
+        this.props.actions.removeDispatch(id);
         // this.props.history.push('/about');
     }
 }

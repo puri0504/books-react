@@ -17,6 +17,7 @@ class Book extends Component {
                 {desc}
                 <button onClick={this.props.onToggleOpen}>{this.props.isOpen ? 'hide' : 'show more'}</button>
                 <button onClick={this.props.onFavorite}>{this.props.book.favorite ? 'unfavorite' : 'favorite'}</button>
+                <button onClick={this.props.onRemove}>remove</button>
             </div>
         )
     }
@@ -31,6 +32,7 @@ Book.propTypes = {
     isOpen: PropTypes.bool,
     onToggleOpen: PropTypes.func,
     onFavorite: PropTypes.func,
+    onRemove: PropTypes.func,
 }
 
 export default Book;

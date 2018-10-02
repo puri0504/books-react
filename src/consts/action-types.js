@@ -1,3 +1,5 @@
-export const FETCHING_FAVORITE = 'FETCHING_FAVORITE';
+export const FETCHING_ACTION = 'FETCHING_ACTION';
 export const TOGGLE_FAVORITE = 'TOGGLE_FAVORITE';
+export const REMOVE_BOOK = 'REMOVE_BOOK';
+export const ADD_BOOK = 'ADD_BOOK';
 export const RENAME_AUTHOR = 'RENAME_AUTHOR';

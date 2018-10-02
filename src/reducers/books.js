@@ -1,4 +1,4 @@
-import {TOGGLE_FAVORITE} from '../consts/action-types';
+import {TOGGLE_FAVORITE, REMOVE_BOOK, ADD_BOOK} from '../consts/action-types';
 
 const initialState = [
     {
@@ -25,6 +25,8 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_FAVORITE:
             return state.map(book => book.id === action.payload ? {...book, favorite: !book.favorite} : book);
+        case REMOVE_BOOK:
+            return state.filter(book => book.id !== action.payload);
         default:
             return state;
     }
