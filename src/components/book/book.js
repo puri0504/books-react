@@ -7,6 +7,7 @@ class Book extends Component {
         super(props);
         this.titleRef = React.createRef();
     }
+
     render() {
         const desc = this.props.isOpen && <div className="desc">{this.props.book.desc}</div>
         const bookCssClasses = 'book' + (this.props.book.favorite ? ' favorite' : '')

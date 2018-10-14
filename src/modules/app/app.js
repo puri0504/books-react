@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import NavBar from '../navbar/navbar'
-import NotFound from '../not-found';
-import VisibleBookList from '../../containers/routes/book-list';
-import About from '../../containers/routes/about';
+import NavBar from 'components/navbar/navbar'
+import NotFound from 'modules/not-found';
+import VisibleBookList from 'containers/routes/book-list';
+import About from 'containers/routes/about';
 import './app.css';
 
 class App extends Component {

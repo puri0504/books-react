@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as BooksActions from '../actions'
-import BookList from '../components/book-list'
-import {getBooks} from '../reducers/books';
+import * as BooksActions from 'actions'
+import BookList from 'components/book-list'
+import {getBooks} from 'reducers/books';
 
 const mapStateToProps = state => {
   return {

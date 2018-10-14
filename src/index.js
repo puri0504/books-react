@@ -5,8 +5,8 @@ import {createStore, applyMiddleware} from 'redux';
 import {BrowserRouter as Router} from 'react-router-dom';
 import thunk from 'redux-thunk'
 import './index.css';
-import App from './components/app/app';
-import reducer from './reducers';
+import App from 'modules/app/app';
+import reducer from 'reducers';
 
 const logger = store => next => action => {
     console.log('dispatching', action)
