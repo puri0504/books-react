@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import BookList from 'components/book-list'
+import VisibleBookList from 'containers/visible-book-list';
+// import BookList from 'components/book-list'
 
 class Books extends Component {
     render() {
         return (
             <div className="books">
-                <BooksList />
+                <VisibleBookList />
             </div>
         )
     }
 }
+
+export default Books;
